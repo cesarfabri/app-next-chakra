@@ -1,5 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
+import Image from 'next/image'
+import styles from './home.module.scss';
+import girlWork from '../../public/images/avatar.svg'
 
 const Home: NextPage = () => {
   return (
@@ -7,9 +10,17 @@ const Home: NextPage = () => {
       <Head>
         <title>DI Adm</title>
       </Head>
-      <h1>
-        Página home
-      </h1>
+      <main className={styles.contentContainer}>
+        <section className={styles.hero}>
+          <span>👏 Bem Vindo!!!! </span>
+          <h1>Você está na área <span>ADM</span> da DI Center</h1>
+          <p>Para acessar os cadastros, escolha o desejado no <br /> 
+            <span>menu acima</span>
+          </p>
+        </section>
+
+        <Image src={girlWork} alt="Girl working" objectFit='contain'/>
+      </main>
     </>
   )
 }
